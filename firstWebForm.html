@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Web Form</title>
+    <style>
+        .name-info {
+            width: 300px;
+        }
+
+        .contact-info {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My First Web Form</h1>
+    <form method="POST" action="https://jkorpela.fi/cgi-bin/echo.cgi" target="cgi-results">
+        <fieldset>
+            <legend>Name Information:</legend>
+            <label for="firstName">First Name:</label>
+            <input type="text" class="name-info" tabindex="1" required id="firstName" placeholder="Please type your first name"
+                name="firstName"><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="name-info" tabindex="2" required id="lastName" placeholder="Please type your last name" name="lastName">
+        </fieldset>
+        <fieldset>
+            <legend>Conact Information</legend>
+            <label for="email">Email:</label>
+            <input type="email" class="contact-info" tabindex="3" title="Input your Email Address" name="email" id="email"
+                placeholder="Input your email address"><br>
+            <label for="telephone">Phone:</label>
+            <input type="tel" class="contact-info" tabindex="4" value="6709892331" name="telephone" id="telephone" placeholder="Input a good mobile number">
+        </fieldset>
+        <fieldset>
+            <legend>Birthday:</legend>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" tabindex="5" required id="dob"><br>
+            <label for="Date">Today's Date</label>
+            <input type="date" name="today" tabindex="6" value="2022-11-3" id="today">
+        </fieldset>
+        <fieldset>
+            <input tabindex="7" type="submit">
+        </fieldset>
+    </form>
+    <iframe name="cgi-results" id="cgi-results"></iframe>
+</body>
+
+</html>
